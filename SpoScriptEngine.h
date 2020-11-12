@@ -9,6 +9,8 @@
 #include <QJsonDocument>
 #include <cmath>
 
+#define PI 3.14159265
+
 class Obj1:public QObject{
     Q_OBJECT
 public slots:
@@ -30,6 +32,16 @@ class Obj3:public QObject{
 public slots:
 
     float power(float a, float b) {return pow(a,b);}
+    float sinus(float a) {return sin(a * PI /180);}
+    float cosinus(float a) {return cos(a * PI /180);}
+    float tangens(float a) {return tan(a * PI /180);}
+    float cotangens(float a) {return cos(a * PI /180)/sin(a * PI /180);}
+    float exponenta(float a) {return exp(a);}
+    float ln(float a) {return log(a);}
+    float logarifm(float a, float b)
+    {
+        return ln(b) / ln(a);
+    }
 };
 
 class SpoJSon : public QObject
